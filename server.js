@@ -13,6 +13,8 @@ app.set('view engine', 'ejs');
 var routes_setter = require('./config/routes.js');
 routes_setter(app);
 
+// app.get("/",)
+
 app.listen(port, function() {
   console.log('Listening on', port);
 });

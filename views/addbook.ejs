@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+    <a href="/">Back</a>
+    <h1>New Book</h1>
+
+    <form action="/" method="post">
+        <input type="text" name="title" placeholder="Title"><br>
+        <br>
+        <input type="text" name="imgUrl" placeholder="Image URL">
+        <br>
+        <textarea name="description" rows="8" cols="80" placeholder="Description"></textarea><br>
+        <br>
+        <div>Author</div>
+        <select>
+            <% for(let i = 0; i<author.length; i++) { %>
+                <option name="author" value=author[i].authorName><%=author[i].authorName%></option>
+            <% } %>
+            </select>
+            <br>
+            <button type="submit">Submit</button>
+            <br>
+            <br>
+            
+            <a href="/addAuthor">Add a new Author</a>
+    </form>
+</body>
+
+</html>

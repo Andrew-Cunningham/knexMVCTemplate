@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+    <a href="/">Home</a>
+   
+  
+    <br>
+    
+    
+        
+        <h1><%= book.title %></h1>
+        <img src=<%=book.imgUrl%>>
+        <p><%= book.description %></p>
+        <br>
+    
+    <h1>Comments</h1>
+    <% for(let i = 0; i<comments.length; i++) { %>
+    <fieldset>
+        <p><%= comments[i].name %>:</p>
+        
+        <p><%= comments[i].comment %></p>
+        
+    </fieldset>
+    <% } %>
+<br>
+    <form action="/comments/<%=book.id%>" method="post">
+        <input type="text" name="name" placeholder="Name"><br>
+        <br>
+        <input type="text" name="comment" placeholder="Comment">
+        <br>
+
+        <button type="submit">Add</button>
+    
+
+</body>
+
+</html>

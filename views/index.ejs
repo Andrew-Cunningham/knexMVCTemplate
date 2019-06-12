@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>All Books</title>
+    <style media="screen">
+      *{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>BOOKS</h1>
+    <a href="/addBook">Add a new Bo0k</a>
+    <% for(let i = 0; i<book.length; i++) { %>
+    <fieldset>
+      <h2><%= book[i].title %></h2>
+      <img src=<%=book[i].imgUrl%>>
+      <p><%= book[i].description %></p>
+    
+      <br>
+      <button onclick="window.location.href='/comments/<%= book[i].id %>';">Discuss this Bo0k</button>
+      
+    </fieldset>
+    <% } %>
+  </body>
+</html>
